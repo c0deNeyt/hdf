@@ -1,0 +1,299 @@
+
+
+/* Responsive Full Background Image Using CSS
+ * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
+*/
+body {
+   /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+  /* Location of the image */
+  background-image: url(../img_ico/img/BG.jpg);
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(../img_ico/img/BG.jpg);
+  }
+	}
+
+/* ==========================================================================
+   #icon
+   ========================================================================== */
+#container{width:100%; }
+#left{float:left;width:25%; height: 96px;padding-left: 0px; 
+padding-top: 20px;}
+#right{float:right;width:20%;height: 1050px; padding-top: 18px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 0px;}
+#center{   
+        width:100%;
+        height: 55px;
+        padding: 0px;}
+/* ==========================================================================
+   #GRID and input
+   ========================================================================== */
+
+
+.search-box{
+  width: 300px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;}
+
+  .text-line {
+ 
+   background-color: transparent;
+    color: #eeeeee;
+    font-size: 16px;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 3px 8px;
+    width: 40%;
+    text-transform: uppercase;
+    border-bottom:1px solid #3ba3f0; 
+}
+
+}
+
+col-1 {
+padding: 10px;
+}
+hr {
+	color: #3ba3f0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.row-space {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.col-2 {
+  width: -webkit-calc((100% - 30px) / 2);
+  width: -moz-calc((100% - 30px) / 2);
+  width: calc((100% - 30px) / 2);
+}
+
+@media (max-width: 767px) {
+  .col-2 {
+    width: 100%;
+  }
+}
+
+.input--style-4 {
+  line-height: 65px;
+  width: 370px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 35px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.input--style-lang {
+  line-height: 65px;
+  width: 370px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 25px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+.radio-container {
+  display: inline-block;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  font-size: 29px;
+  color: #ffffff;
+  -webkit-user-select: ;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+
+input[type="radio"] {
+    opacity: 0;
+
+ }
+
+ input[type="radio"]+label:before {
+    display: none;
+     content: "";
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     padding: 3.0px;
+     margin-top: 0px;
+     margin-left: -35px;
+     margin-right: 20px;
+     background-clip: content-box;
+     border: 3px solid #fff;;
+     background-color: #e7e6e7;
+     border-radius: 50%       
+ }
+
+
+ input[type="radio"]:checked+label:before {
+     background-color: #3ba3f0;
+ }
+
+ 
+
+/* ==========================================================================
+   #Text format
+   ========================================================================== */
+h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  height: 25px;
+}
+
+.title {
+  font-size:35px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.title1 {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.input-group {
+  /*position: relative;*/
+   margin-bottom: 20px;
+  margin-bottom: 20px;
+ color: #cccccc;
+}
+
+.input-group-icon {
+  position: relative;
+}
+.label {
+  font-size: 37px;
+  color: #cccccc;
+  line-height: 60px;
+}
+.tanong {
+  font-size: 25px;
+  color: #cccccc;
+  text-transform: none;
+  display: block;
+  margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   #BTN
+   ========================================================================== */
+
+.btn {
+display: inline-block;
+line-height: 70px;
+padding: 0 40px;
+-webkit-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+transition: all 0.4s ease;
+cursor: pointer;
+font-size: 30px;
+color: #fff;
+font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+margin:0 auto;
+display:block;
+}
+
+.btn--radius-2 {
+  -webkit-border-radius: 9%;
+  -moz-border-radius: 9%;
+  border-radius: 5%;
+}
+.btn--blue {
+  background: #4272d7;
+}
+
+
+/* ==========================================================================
+   #CARD
+   ========================================================================== */
+.card {
+ max-width: 780px;
+ padding: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+blockquote {
+  display: block;
+  max-width: 690px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: rgba(128, 0, 0, 0.80);  
+  color: #e1e1e1;
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  line-height: 28px;
+}
+
