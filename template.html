@@ -1,0 +1,96 @@
+
+              <div class = "willingToVacDiv">
+                <label class="form-check-label" for="same-address">Are you willing to receive the covid-19 vaccine?.&nbsp<br>(Ikaw ba ay sumasangayon na makatanggap ng bakunang covid-19?)</label>
+                <div class="YesNo2 my-4 row ">
+                  <div class="form-check col">
+                    <input type="radio" id="willingYes"name="willing" value="Yes"  class="form-check-input" required>
+                    <label class="form-check-label" for="willingYes">Yes!(Oo)</label>
+                  </div>
+
+                  <div class="form-check col">
+                    <input type="radio" id="willingNo"name="willing" value="No" class="form-check-input" required>
+                    <label class="form-check-label" for="willingNo">No(Hindi)</label>
+                  </div>
+                </div>
+                <script class ="optTemplate2" type = "text/x-content-template">
+                  <div class = "optInpt4willingToVac">
+                    <label vaccine="true" class="form-check-label" for="whyNo">If no, why:</label>
+                    <input vaccine="true" type="text" class="text-line form-control" id="whyNo" required>
+                    <div vaccine="true" id="whyNo" class="hide2 invalid-feedback">
+                    This field  is required.
+                    </div>          
+                  </div>
+                </script>
+              </div>
+              <!-- WILLING TO VACINATED DIV ENDS HERE -->
+
+              <div class = "municipalityVac">
+                <label class="form-check-label">Have you registered in your municipality to avail of covid-19 vaccine?.&nbsp<br>(Nagpa rehistro ka ba sa iyong munisipyo para sa covid-19 na bakuna?)</label>
+                <div class="YesNo3 my-4 row">
+                  <div class="form-check col">
+                    <label class="form-check-label" for="availVacYes">
+                    <input type="radio" id="availVacYes" name="vacRegistered" value="Yes"  class="form-check-input" required>Yes!(Oo)</label>
+                  </div>
+                  <div class="form-check col">
+                    <label class="form-check-label" for="availVacNo"><input type="radio" id="availVacNo" name="vacRegistered" value="No" class="form-check-input" required>No(Hindi)</label>
+                  </div>
+                </div>
+                <script class="optTemplate3" type = "text/x-content-template" >
+                  <div class = "optInpt4RegLoc">
+                    <label registered="true" class="form-check-label" for="regLoc">If yes, where:</label>
+                    <input registered="true" id="regLoc" type="text" class="text-line form-control" required>
+                    <div registered="true" class="hide3 invalid-feedback">This field  is required.</div>
+                  </div>        
+                </script>
+              </div>
+              <!-- QUESTION IF EMPLOYEE TAKE A VACINE TO OUR 
+              MINUCIPALITY ENDS HERE -->
+
+              <div class = "vaccinatedQues">
+                <label class="form-check-label mt-3" for="same-address">Have you been vaccinated (covid-19) by your municipality?<br>(Nabakunahan ka na ba ng covid-19 vaccine sa inyong munisipyo?)</label>
+                <div class="YesNo4 my-4 row ">
+                  <div class="form-check col">
+                    <label class="form-check-label" for="vaccinatedYes"><input type="radio" id="vaccinatedYes" name="vaccinated" value="Yes"  class="form-check-input" required>Yes!(Oo)</label>
+                  </div>
+                  <div class="form-check col">
+                    <label class="form-check-label" for="vaccinatedNo">
+                    <input type="radio" id="vaccinatedNo" name="vaccinated" value="No" class="form-check-input" required>No(Hindi)</label>
+                  </div>
+                </div>
+                <script class ="optTemplate4" type = "text/x-content-template">
+                  <div class = "vacinatedOpt">
+                    <div>
+                      <label class="form-check-label" for="nabakunahanYes">If yes, when:</label>
+                      <input type="text" id = "vacDate" class="vacDate text-line form-control" required>
+                      <div nabakunahan="true" class="hide4 invalid-feedback">This field  is required.</div>     
+                    </div>
+                    <!-- Kung ikaw ay nabakunahan na, 1st dose/2nd dose? -->
+                    <div class="row">
+                      <div class="col-sm-6 mb-4 mt-3">
+                        <label for="dosetype" class="form-label">Dose(1st/2nd)? </label>
+                        <select class="dosetype form-select" id="dosetype" name="dosetype" required>
+                          <option selected disabled value="" class="form-control">Choose...</option>
+                                <option value="1stDose">1st Dose</option>
+                                <option value="2ndDose">2nd Dose</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Kung ikaw ay nabakunahan na, Anong klaseng bakuna? -->
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="bakunatype" class="form-label">Covid-19 Vaccine Brand? </label>
+                        <select class="bakunatype form-select" id="bakunatype" name="bakunatype" required>
+                          <option selected disabled value="" class="form-control">Choose...</option>
+                                <option value="sinovax">Sinovax</option>
+                                <option value="pfizer">Phizer-bioNTech</option>
+                                <option value="astrazenica">Astrazenica</option>
+                                <option value="moderna">Moderna</option>
+                                <option value="sputnik">SputnikV</option>
+                                <option value="covovax">Covovax</option>
+                        </select>
+                      </div>  
+                    </div>
+                  </div>
+                </script>
+              </div>
+              <!-- VACINATED QUESTION ENDS HERE -->

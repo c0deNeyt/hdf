@@ -141,8 +141,6 @@ p.text-center{
     background-color: rgba(255, 255, 255, 0.0);  
 
 }
-
-
 /* ==========================================================================
    #background padding
    ========================================================================== */
@@ -150,8 +148,7 @@ p.text-center{
 .py-5 {
             padding-top: 3rem!important;
             padding-bottom: 0rem!important;
-        }
-
+}
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -159,6 +156,16 @@ p.text-center{
         -moz-user-select: none;
         user-select: none;
       }
+#lastname_1, #firstname_1 {
+  text-align: center;
+}
+
+.hide.invalid-feedback, .hide3.invalid-feedback, .hide4.invalid-feedback {
+  margin: .7rem 0 0 7rem;
+}
+.hide2.invalid-feedback {
+  margin: .7rem 0 0 6.3rem;
+}
 /* ==========================================================================
    #mobile view migin top etc.
    ========================================================================== */

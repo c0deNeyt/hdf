@@ -1,5 +1,5 @@
 <?php
-include("../php/cnfg.php");
+require("../php/cnfg.php");
 date_default_timezone_set('Asia/Singapore');
 
 // //EMPLOYEE EXPORT CODE 
@@ -15,8 +15,8 @@ if(isset($_POST["export"])){
 	  // THIS CODE USED TO READ SPECIAL CHARACTER LIKE "Ñ"
 	  fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF)); 
 
-	  fputcsv($output, array('btemp', 'empid', 'fname', 'lname', 'time', 'date', 'symptoms', 'travelled', 'travloc'));  
-	  $query = "SELECT * from hdf_tbl ORDER BY date DESC";  
+	  fputcsv($output, array('btemp', 'empid', 'fname', 'department', 'time', 'date', 'symptoms', 'travelled', 'travloc', 'willing', 'whyNo'));  
+	  $query = "SELECT `btemp`, `empid`, `fname`, `department`, `time`, `date`, `symptoms`, `travelled`, `travloc`, `willing`, `whyNo` FROM `hdf_tbl`  ORDER BY date DESC";  
 	  $result = mysqli_query($con, $query);  
 	  while($row = mysqli_fetch_assoc($result))  
 	  {  
@@ -50,7 +50,7 @@ if(isset($_POST["exportv"])){
 	  fclose($output); 
 
 	exit(); 
-}  
+} ;
 
 
 ?>

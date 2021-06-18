@@ -59,6 +59,45 @@
               }
             });
 
+ /* ==========================================================================
+           #KAPAG IKAW AY PUMINDOT NG NO SA WILLING TO HAVE VACCINE
+           ========================================================================== */
+
+    jQuery(function ($){
+            $('#willingNo').change(function () 
+                {
+                $('input[willing="true"]').toggle(this.checked)
+                $('label[willing="true"]').toggle(this.checked)
+                $('input[willing="true"]').attr("required", true);
+
+            })
+                .change();//initialize with correct display state 
+        });
+
+        $('#willingYes').change(function() {
+            if($('#willingYes').is(':checked')){
+            $('input[willing="true"]').attr("required", false);
+               $("input[willing='true']").hide();
+               $("label[willing='true']").hide();
+            } else {
+                $("input[willing='true']").hide();
+                $("label[willing='true']").hide();
+            }
+        }).change();
+
+        /* ==========================================================================
+           # WHEN willing yes IS CLICKED IF THERE IS A whyNo INPUT CLEAR THAT
+           # TRY LANG ENGLISH
+           ========================================================================== */
+
+        $('input[name="willing"]').on('click', function() {
+              if ($(this).val() === '') {
+                $('#whyNo').prop('disabled', false);
+              } else {
+                $('#whyNo').prop("disabled", false).val('');
+              }
+            });
+
 //above function is end here.
 
     $(document).ready(function() {
@@ -224,13 +263,15 @@ $('#register').click(function(e){
     var symptoms        = $("input[name='symptoms']:checked").val();
     var travelled       = $("input[name='travelled']:checked").val();
     var travloc         = $('#travloc').val();
+    var willing       = $("input[name='willing']:checked").val();
+    var whyNo         = $('#whyNo').val();
     var cbx             = $('#cbx').val();
     
         e.preventDefault(); 
             $.ajax({
                 type: 'POST',
                 url: './php/process.php',
-                data: {btemp: btemp,empid: empid,fname: fname,lname: lname,time: time,date: date, symptoms: symptoms, travelled: travelled, travloc: travloc, cbx: cbx},
+                data: {btemp: btemp,empid: empid,fname: fname,lname: lname,time: time,date: date, symptoms: symptoms, travelled: travelled, travloc: travloc, willing: willing, whyNo: whyNo, cbx: cbx},
                 cache : false, 
                     success: function(data){
 
