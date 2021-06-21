@@ -5,4 +5,4 @@ This System have 3 diffirent page.
 
   ##1.For Employee (localhost/HDF/) 
   ##2.For Visistors (localhost/HDF/v)
-  ##3.Export page for Data Report and export as .csv file (localhos/HDF/exp) 
+  3.Export page for Data Report and export as .csv file (localhos/HDF/exp) 
