@@ -1,9 +1,9 @@
 <?php
 $host = "127.0.0.1"; /* Host name */
-// $user = 'root'; /* User */
-$user = 'neyt'; /* User */
-// $password = 'gieRHAAA9iSi3ULZ'; /* Password */
-$password = 'dkoalam3h'; /* Password */
+$user = 'root'; /* User */
+// $user = 'neyt'; /* User */
+$password = 'gieRHAAA9iSi3ULZ'; /* Password */
+// $password = 'dkoalam3h'; /* Password */
 $dbname = "telford_db"; /* Database name */
 
 
