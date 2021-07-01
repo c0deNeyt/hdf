@@ -39,9 +39,11 @@
     <script defer src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <!------------------------------------------------------------------>
     <!-- Sweetalert Core --> 
-    <script src="./js/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
     <!------------------------------------------------------------------>
-  </head>
+    <script src="https://use.fontawesome.com/5fe0351dea.js"></script>
+    <!------------------------------------------------------------------>
+  </head>     
   <body class="bg-light">
     <div class="container card">
       <main>
