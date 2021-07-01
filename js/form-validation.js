@@ -204,7 +204,7 @@
           this.covid19SymptomsDetected = function (str){
             Swal.fire({
               title: 'Are you sure?',
-              text: "You won't be able to revert this!",
+              html: "Detected COVID19 symptoms with <br>" + "<span style='font-size: 3rem; color:red; font-family: Arial, Helvetica, sans-serif;'>" + btemp + "&#x2103 </span><br>" + "body temperature!",
               icon: 'warning',
               showCancelButton: true,
               backdrop: "rgba(209, 10, 10, 0.77)",
@@ -312,7 +312,8 @@
             sweetAlerts.covid19SymptomsDetected(str3);
           }
           else {
-            sweetAlerts.successDeclaration();
+            // sweetAlerts.successDeclaration();
+            sweetAlerts.covid19SymptomsDetected(str2);
           }
         }; /* Function alertExecute ends here */
             
@@ -320,6 +321,7 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+          alertExecute();
         }  
         else {
           event.preventDefault();
