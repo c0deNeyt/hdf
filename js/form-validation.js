@@ -312,8 +312,7 @@
             sweetAlerts.covid19SymptomsDetected(str3);
           }
           else {
-            // sweetAlerts.successDeclaration();
-            sweetAlerts.covid19SymptomsDetected(str2);
+            sweetAlerts.successDeclaration();
           }
         }; /* Function alertExecute ends here */
             
