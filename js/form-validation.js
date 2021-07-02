@@ -320,7 +320,6 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
-          alertExecute();
         }  
         else {
           event.preventDefault();
