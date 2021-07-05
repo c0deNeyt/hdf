@@ -14,29 +14,28 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!------------------------------------------------------------------>
     <link href="../css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
       <!-- SEARCH JS/css -->
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <!------------------------------------------------------------------>
-    <!-- <script defer src="../js/jquery-ui.min.js" type="text/javascript"></script>  -->
-    <!------------------------------------------------------------------>
-    <script defer src="../js/search-employee.js"></script>
     <!------------------------------------------------------------------>
     <script defer src="../assets/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>  
     <!------------------------------------------------------------------>
     <!-- EMAIL -->
     <script src="https://smtpjs.com/v3/smtp.js"></script> 
     <!------------------------------------------------------------------>
-    <script defer src="../js/time_date.js"></script>
+    <script defer src = "../js/additional_features.js"></script>
     <!------------------------------------------------------------------>
-    <script defer src="../js/additional_features.js"></script>
+    <script defer src="../js/time_date.js"></script>
     <!------------------------------------------------------------------>
     <script defer src="../js/form-validation-visitor.js"></script>
     <!------------------------------------------------------------------>
     <script defer src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <!------------------------------------------------------------------>
     <!-- Sweetalert Core --> 
-    <script src="../js/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    <!------------------------------------------------------------------>
+    <script src="https://use.fontawesome.com/5fe0351dea.js"></script>
     <!------------------------------------------------------------------>
 
 
@@ -161,8 +160,7 @@
           <h5 class="mb-3">Declaration and Data Privacy Consent Form:</h5>
           <label class="form-check-label" for="same-address">I hereby authorize TELFORD,  to collect and process the data indicated herein for the purpose of contract tracing effecting control of COVID-19s transmission, I understand that my personal information is protected by RA 10173 or the data privacy act of 2012 and this form will be destroyed after 30 days from the date of accomplishment, following the National Archives of the Philippines Protocol.</label>
         </div>
-
-        <button class="w-100 btn btn-primary btn-lg" name="submit" id="travloc" type="submit">Continue to Submit</button>
+        <button class="w-100 btn btn-primary btn-lg" id="submit" name="submit" type="submit">Continue to Submit</button>
       </form>
     </div>
     </main>

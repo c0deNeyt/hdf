@@ -1,5 +1,5 @@
 # Health Declaration Form System 
-This a web base system. I Build this system for Covid19 Contact tratcing. 
+This a web base system. I Build this system for Covid19 Contact tracing. 
 A government requirement to our company. We use a local area network to access the system. 
 This System have 3 different page. 
 
