@@ -38,9 +38,9 @@
               Host: "smtp.gmail.com",
               Username : "telford.mis.hdf.developer@gmail.com",
               Password : "ofdtqxrgwapczvet",
-              // To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, charitylanceta@astigp.com, ivenponiente@astigp.com, telford_clinic_ph@astigp.com, telford_mis_ph@astigp.com",
+              To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, charitylanceta@astigp.com, ivenponiente@astigp.com, telford_clinic_ph@astigp.com, telford_mis_ph@astigp.com",
               // To : "telford_mis_ph@astigp.com",
-              To : "chanchristianarana@gmail.com",
+              // To : "chanchristianarana@gmail.com",
               From : "telford.mis.hdf.developer@gmail.com",
               Subject : subjectMsg,
               Body : "To whom it may concern,"+
