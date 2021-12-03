@@ -1,16 +1,39 @@
-
-
+class request{
+  constructor(p){
+    this.formData = p;
+  }
+  ajaxRequestGetDetails (){
+    return new Promise ((resolve, reject)=>{
+      /**AJAX REQUEST */
+      $.ajax({
+        type: 'POST',
+        url: "./php/getDetails.php",
+        data: this.formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        dataType: "json",
+        success: function(response){
+            resolve(response);
+        },
+        error: function(e){
+            reject(e);
+        }
+      });
+    });
+  };
+};
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
+( function () {
   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation');
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
+      form.addEventListener('submit', async function (event) {
         // INITIALIZATION OF VARIABLES...
         var btemp           = $("input[name='btemp']").val();
         var empid           = $("input[name='empid']").val();
@@ -59,30 +82,43 @@
         var sweetAlerts = new alerts();
         // FUNCTION THAT HANDLES THE FORMAT OF EMAILS
         function emails() {
-          this.employeeEmailFormat = function(subjectMsg){
+          this.employeeEmailFormat = async function(subjectMsg){
+            const p = new FormData();
+            p.append("empid",  empid);
+            p.append('request', 1);
+            /**NEW INSTANCE FOR VACCINATION DETAILS REQUEST */
+            const vacDetailsReq = new request(p);
+            let  vacStat = await vacDetailsReq.ajaxRequestGetDetails();
+            if(vacStat){
+                vacStat = "Unvaccinated";
+            }
+            else{
+              vacStat = "Vaccinated";
+            }
             // console.log("Email sent with subject |", subjectMsg);
             // ** Email API format that employee have a COVID19 symptoms!
             Email.send({
               Host: "smtp.gmail.com",
               Username : "telford.mis.hdf.developer@gmail.com",
-              Password : "ofdtqxrgwapczvet",
-              To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, charitylanceta@astigp.com, ivenponiente@astigp.com, telford_clinic_ph@astigp.com, telford_mis_ph@astigp.com",
+              Password : "pxowqhiqpysxlnjn",
+              // To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, paolojehecoaurigue@astigp.com, charitylanceta@astigp.com, , telford_clinic_ph@astigp.com, telford_mis_ph@astigp.com",
               // To : "telford_mis_ph@astigp.com",
-              // To : "chanchristianarana@gmail.com",
+              To : "leilaungson@astigp.com, chanchristianarana@gmail.com",
               From : "telford.mis.hdf.developer@gmail.com",
               Subject : subjectMsg,
               Body : "To whom it may concern,"+
               "<br/>" + "<br/>" + "<br/>" +
               "Please accept this letter as notification regarding our employee." +
               "<br/>" +
-              "Kindly see details below for your reference."+
+              "Kindly see employee inputted details below for your reference."+
               "<br/>" + "<br/>" +
               "Employee ID: " + " " + empid + "<br/>" +
               "Employee Name: " + " " + fname + "<br/>" + 
               "Body temperature: " + " " + btemp + "<br/>" +
+              "Vaccination Status: " + " " + vacStat + "<br/>" +
               "Symptoms : " + " " + symptoms + "<br/>" + 
               "Inputted travel location : " + " " + travloc + "<br/>" + 
-              "Date and Time of Declaratio : " + " " + date + ' ' + ' ' + time + 
+              "Date and Time of Declaration : " + " " + date + ' ' + ' ' + time + 
               "<br/>"+ "<br/>"+ "<br/>"+
               "Note:" + 
               "<br/>"+
@@ -265,6 +301,20 @@
         }  
         else {
           event.preventDefault();
+            /**PASSING VALUE TO THE FromData Built In function */
+            const p = new FormData();
+            p.append("empid",  empid);
+            p.append('request', 1);
+            /**NEW INSTANCE FOR VACCINATION DETAILS REQUEST */
+            const vacDetailsReq = new request(p);
+            const vacDetailsRes = await vacDetailsReq.ajaxRequestGetDetails();
+            if(vacDetailsRes){
+              let emailSubject2 = "Attendance Notification of Unvaccinated Employee";
+              storedEmailFormat.employeeEmailFormat(emailSubject2);
+            }
+            else{
+              return false;
+            };
           alertExecute();
         };
         form.classList.add('was-validated')
