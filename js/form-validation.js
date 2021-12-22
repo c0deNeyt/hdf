@@ -101,9 +101,9 @@ class request{
               Host: "smtp.gmail.com",
               Username : "telford.mis.hdf.developer@gmail.com",
               Password : "pxowqhiqpysxlnjn",
-              // To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, paolojehecoaurigue@astigp.com, charitylanceta@astigp.com, , telford_clinic_ph@astigp.com, telford_mis_ph@astigp.com",
+              To : "mariarizalinacortez@astigp.com, leelipkeng@astigp.com, mellobo@astigp.com, paolojehecoaurigue@astigp.com, charitylanceta@astigp.com, , telford_clinic_ph@astigp.com, raqueltibayan@astigp.com, telford_mis_ph@astigp.com",
               // To : "telford_mis_ph@astigp.com",
-              To : "leilaungson@astigp.com, chanchristianarana@gmail.com",
+              // To : "leilaungson@astigp.com, chanchristianarana@gmail.com",
               From : "telford.mis.hdf.developer@gmail.com",
               Subject : subjectMsg,
               Body : "To whom it may concern,"+
@@ -301,7 +301,8 @@ class request{
         }  
         else {
           event.preventDefault();
-            /**PASSING VALUE TO THE FromData Built In function */
+          alertExecute();
+          /**PASSING VALUE TO THE FromData Built In function */
             const p = new FormData();
             p.append("empid",  empid);
             p.append('request', 1);
@@ -313,9 +314,8 @@ class request{
               storedEmailFormat.employeeEmailFormat(emailSubject2);
             }
             else{
-              return false;
             };
-          alertExecute();
+          
         };
         form.classList.add('was-validated')
       }, false)
